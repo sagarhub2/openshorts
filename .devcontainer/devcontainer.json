@@ -1,0 +1,26 @@
+{
+  "name": "Sagar Shorts",
+  "image": "mcr.microsoft.com/devcontainers/base:ubuntu",
+  "features": {
+    "ghcr.io/devcontainers/features/docker-in-docker:2": {
+      "version": "latest",
+      "moby": true,
+      "dockerDashComposeVersion": "v2"
+    }
+  },
+  "forwardPorts": [5175, 8000, 3100],
+  "portsAttributes": {
+    "5175": {
+      "label": "Sagar Shorts dashboard",
+      "onAutoForward": "openBrowser"
+    },
+    "8000": {
+      "label": "Sagar Shorts API",
+      "onAutoForward": "silent"
+    },
+    "3100": {
+      "label": "Sagar Shorts renderer",
+      "onAutoForward": "silent"
+    }
+  }
+}
